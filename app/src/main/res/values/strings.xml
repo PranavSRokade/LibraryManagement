@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Library Management</string>
+    <string name="description">Description: -</string>
+    <string name="book_image">Book Image</string>
+    <string name="borrow">Borrow</string>
+    <string name="click_here">Are you an Administrator?<font color='#4b92db'> Click Here</font></string>
+</resources>
