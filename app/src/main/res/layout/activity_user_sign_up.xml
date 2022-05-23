@@ -4,16 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UserLogin">
-
+    tools:context=".UserSignUp">
 
     <TextView
-        android:id="@+id/userLogin"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
         android:fontFamily="@font/proxima_nova_bold"
-        android:text="Login"
+        android:text="Sign Up"
         android:textAlignment="center"
         android:textColor="#4b92db"
         android:textSize="54sp"
@@ -23,23 +22,22 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/loginUser"
+        android:id="@+id/newSignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="120dp"
+        android:layout_marginBottom="96dp"
         android:backgroundTint="#4b92db"
         android:fontFamily="@font/julius_sans_one"
-        android:text="Login"
+        android:text="Sign Up"
         android:textAllCaps="false"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/usernameUser"
+        android:id="@+id/newUsername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/input"
@@ -54,50 +52,42 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.269" />
+        app:layout_constraintVertical_bias="0.289" />
 
     <EditText
-        android:id="@+id/passwordUser"
+        android:id="@+id/newPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/input"
         android:ems="10"
         android:fontFamily="@font/proxima_nova_regular"
         android:hint="Password"
-        android:inputType="textPassword"
+        android:inputType="textPersonName"
         android:minHeight="48dp"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/usernameUser"
-        app:layout_constraintVertical_bias="0.059" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.393" />
 
-    <TextView
-        android:id="@+id/clickHere"
+    <EditText
+        android:id="@+id/newEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/input"
+        android:ems="10"
         android:fontFamily="@font/proxima_nova_regular"
-        android:text="@string/click_here"
-        android:textSize="16sp"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginUser"
-        app:layout_constraintVertical_bias="0.504" />
-
-    <TextView
-        android:id="@+id/signUp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="376dp"
-        android:fontFamily="@font/proxima_nova_regular"
-        android:text="@string/signUp"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,4 +4,5 @@
     <string name="book_image">Book Image</string>
     <string name="borrow">Borrow</string>
     <string name="click_here">Are you an Administrator?<font color='#4b92db'> Click Here</font></string>
+    <string name="signUp">New Here?<font color='#4b92db'> Register Yourself!</font></string>
 </resources>

@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LibraryManagement">
         <activity
+            android:name=".UserSignUp"
+            android:exported="false" />
+        <activity
             android:name=".UserLogin"
             android:exported="true">
             <intent-filter>
@@ -34,7 +37,7 @@
             android:exported="false" />
         <activity
             android:name=".ListOfBooks"
-            android:exported="false"/>
+            android:exported="false" />
 
         <meta-data
             android:name="preloaded_fonts"
