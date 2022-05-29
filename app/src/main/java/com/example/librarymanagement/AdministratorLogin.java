@@ -39,8 +39,12 @@ public class AdministratorLogin extends AppCompatActivity {
             public void onClick(View view) {
                 if(String.valueOf(username.getText()).equals(sharedPreferences.getString("Username", "")) && String.valueOf(password.getText()).equals(sharedPreferences.getString("Password", ""))){
                     Toast.makeText(AdministratorLogin.this, "Login Successful", Toast.LENGTH_SHORT).show();
+
+                    editor.putBoolean("login", true);
+                    editor.apply();
+
                     finish();
-                    startActivity(new Intent(AdministratorLogin.this, AddBook.class));
+                    startActivity(new Intent(AdministratorLogin.this, ListOfBooks.class));
                 }
                 else{
                     String toast = "Username or Password is incorrect. \nTry Again";

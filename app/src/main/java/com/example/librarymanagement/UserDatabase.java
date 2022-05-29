@@ -4,18 +4,19 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class Database extends SQLiteOpenHelper {
-    private static final String DB_NAME = "database";
+public class UserDatabase extends SQLiteOpenHelper {
+    private static final String DB_NAME = "userDatabase";
     private static final int DB_VERSION = 1;
     private static final String TABLE_NAME = "userLogin";
     private static final String ID = "id";
     private static final String USERNAME = "username";
     private static final String PASSWORD = "password";
 
-    public Database(Context context) {
+    public UserDatabase(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
     }
 
@@ -52,6 +53,7 @@ public class Database extends SQLiteOpenHelper {
         if (cursor.moveToFirst()) {
             do {
                 User user = new User();
+
                 user.setUsername(cursor.getString(1));
                 user.setPassword(cursor.getString(2));
 

@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -46,7 +45,7 @@ public class UserLogin extends AppCompatActivity {
         loginUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Database database = new Database(UserLogin.this);
+                UserDatabase database = new UserDatabase(UserLogin.this);
 
                 ArrayList<User> userList = database.getAllUsers();
 
@@ -78,44 +77,3 @@ public class UserLogin extends AppCompatActivity {
         });
     }
 }
-
-//package com.example.librarymanagement;
-//import android.os.Bundle;
-//import android.view.View;
-//import android.widget.Button;
-//import android.widget.EditText;
-//import android.widget.Toast;
-//
-//import androidx.appcompat.app.AppCompatActivity;
-//
-//public class UserLogin extends AppCompatActivity {
-//    private EditText courseNameEdt, coursePasswordEdt;
-//    private Button addCourseBtn;
-//    private Database dbHandler;
-//
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_user_login);
-////        courseNameEdt = findViewById(R.id.usernameUser);
-////        coursePasswordEdt = findViewById(R.id.passwordUser);
-////        addCourseBtn = findViewById(R.id.loginUser);
-////        dbHandler = new Database(UserLogin.this);
-////
-////        addCourseBtn.setOnClickListener(new View.OnClickListener() {
-////            @Override
-////            public void onClick(View v) {
-////                String courseName = courseNameEdt.getText().toString();
-////                String courseTracks = coursePasswordEdt.getText().toString();
-////                if (courseName.isEmpty() && courseTracks.isEmpty()) {
-////                    Toast.makeText(UserLogin.this, "Please enter all the data..", Toast.LENGTH_SHORT).show();
-////                    return;
-////                }
-////                dbHandler.addNewCourse(courseName, courseTracks);
-////                Toast.makeText(UserLogin.this, "Course has been added.", Toast.LENGTH_SHORT).show();
-////                courseNameEdt.setText("");
-////                coursePasswordEdt.setText("");
-////            }
-////        });
-//    }
-//}

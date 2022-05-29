@@ -28,7 +28,7 @@ public class UserSignUp extends AppCompatActivity {
         newSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ArrayList<User> userList = new Database(UserSignUp.this).getAllUsers();
+                ArrayList<User> userList = new UserDatabase(UserSignUp.this).getAllUsers();
 
 //                for(User user : userList) {
 //                    if (user.getUsername().equals(String.valueOf(newUsername.getText()))) {
@@ -42,7 +42,7 @@ public class UserSignUp extends AppCompatActivity {
                     user.setUsername(String.valueOf(newUsername.getText()));
                     user.setPassword(String.valueOf(newPassword.getText()));
 
-                    new Database(UserSignUp.this).addNewUser(user);
+                    new UserDatabase(UserSignUp.this).addNewUser(user);
 
                     Toast.makeText(UserSignUp.this, "Sign Up Successful!", Toast.LENGTH_SHORT).show();
 

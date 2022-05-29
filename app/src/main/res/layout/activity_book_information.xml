@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/bookImage"
-        android:layout_width="151dp"
-        android:layout_height="140dp"
+        android:layout_width="205dp"
+        android:layout_height="188dp"
         android:contentDescription="@string/book_image"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

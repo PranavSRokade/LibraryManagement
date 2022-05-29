@@ -1,16 +1,17 @@
 package com.example.librarymanagement;
 
-import android.widget.ImageView;
-
 public class Book {
-    String bookName;
-    String author;
-    String description;
+    String bookName, author, description;
+    byte[] image;
 
-    public Book(String bookName, String author, String description) {
+    public Book() {
+    }
+
+    public Book(String bookName, String author, String description, byte[] image) {
         this.bookName = bookName;
         this.author = author;
         this.description = description;
+        this.image = image;
     }
 
     public String getBookName() {
@@ -35,5 +36,13 @@ public class Book {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public byte[] getImage() {
+        return image;
+    }
+
+    public void setImage(byte[] image) {
+        this.image = image;
     }
 }

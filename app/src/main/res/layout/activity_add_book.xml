@@ -6,6 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".AddBook">
 
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="@+id/addDescription"
+        app:layout_constraintTop_toBottomOf="@+id/addDescription"
+        app:srcCompat="@drawable/add_image" />
+
     <TextView
         android:id="@+id/textViewAddBook"
         android:layout_width="wrap_content"
@@ -13,8 +22,8 @@
         android:fontFamily="@font/proxima_nova_bold"
         android:text="Add Book"
         android:textAlignment="center"
-        android:textSize="60sp"
         android:textColor="#4b92db"
+        android:textSize="60sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,12 +35,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
+        android:background="@drawable/input"
         android:ems="10"
         android:fontFamily="@font/proxima_nova_regular"
         android:hint="Enter Book Name"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        android:background="@drawable/input"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -43,30 +52,30 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
         android:layout_marginTop="15dp"
+        android:background="@drawable/input"
         android:ems="10"
         android:fontFamily="@font/proxima_nova_regular"
         android:hint="Enter Author's Name"
         android:inputType="text"
         android:minHeight="48dp"
-        android:background="@drawable/input"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addBookName" />
 
     <EditText
         android:id="@+id/addDescription"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
         android:layout_marginStart="15dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="15dp"
+        android:background="@drawable/input"
         android:ems="10"
         android:fontFamily="@font/proxima_nova_regular"
         android:hint="Enter Description"
         android:inputType="textMultiLine"
         android:minHeight="48dp"
-        android:background="@drawable/input"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addAuthor" />
 
@@ -74,7 +83,7 @@
         android:id="@+id/add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="120dp"
+        android:layout_marginBottom="70dp"
         android:backgroundTint="#4b92db"
         android:fontFamily="@font/julius_sans_one"
         android:text="Add Book"
@@ -85,5 +94,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/addImage"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="108dp"
+        app:layout_constraintBottom_toTopOf="@+id/add"
+        app:layout_constraintStart_toStartOf="@+id/addDescription"
+        app:layout_constraintTop_toBottomOf="@+id/addDescription"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/add_image" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
